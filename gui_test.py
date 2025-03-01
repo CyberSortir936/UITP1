@@ -1,7 +1,7 @@
 import customtkinter as tk
 from Classes import *
 
-base_frequency = 432
+base_frequency = 440
 is_active = False
 offset = 0
 
@@ -22,7 +22,7 @@ def switch_event():
 
 #Ініціалізація вікна
 window = tk.CTk()
-window._set_appearance_mode('light')
+window._set_appearance_mode('dark')
 
 window.title("Tuner")
 window.geometry("512x512")
