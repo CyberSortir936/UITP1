@@ -16,8 +16,8 @@ pipeline {
                 sh '''
                 # Створюємо віртуальне середовище
                 python3 -m venv venv
-                # Активуємо віртуальне середовище
-                source venv/bin/activate
+                # Активація віртуального середовища
+                . venv/bin/activate
                 # Оновлюємо pip
                 pip install --upgrade pip
                 # Встановлюємо залежності
@@ -28,9 +28,9 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
-                # Активуємо віртуальне середовище
-                source venv/bin/activate
-                # Запускаємо тести
+                # Активація віртуального середовища
+                . venv/bin/activate
+                # Запуск тестів
                 python -m unittest discover
                 '''
             }
