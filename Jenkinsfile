@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                sh 'pytest tests/'
+                sh 'python -m unittest discover tests/'
             }
         }
     }
